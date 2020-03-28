@@ -1,0 +1,19 @@
+.root {
+  margin-left: auto;
+  min-height: 2.5rem;
+  min-width: 256px;
+  font-size: 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 0 0.5rem;
+
+  &:hover {
+    border-color: #3d8ea3;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #3d8ea3;
+    box-shadow: 0 0 0 3px rgba(#61dafb, 0.3);
+  }
+}

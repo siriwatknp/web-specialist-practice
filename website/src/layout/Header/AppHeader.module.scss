@@ -1,0 +1,25 @@
+.root {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.24);
+}
+
+.toolbar {
+  min-height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  border-radius: 10rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(#61dafb, 0.3);
+  }
+}
+
+.logo {
+  height: 3.5rem;
+}
