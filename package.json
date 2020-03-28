@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "web-specialist-practice",
+  "workspaces": [
+    "server",
+    "website"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start:website": "yarn workspace website run start",
+    "start:server": "yarn workspace server run start",
+    "start": "run-p start:website start:server"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

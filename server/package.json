@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "server": "PORT=9000 node ./dist/bin/www",
+    "transpile": "babel src --out-dir dist --copy-files",
+    "clean": "rimraf dist-server",
+    "build": "npm-run-all clean transpile",
+    "watch:dev": "NODE_ENV=development npm-run-all build server",
+    "start": "nodemon"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "yarn watch:dev",
+    "watch": [
+      "src/*"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "nodemon": "^2.0.2",
+    "rimraf": "^3.0.2"
+  }
+}
